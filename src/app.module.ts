@@ -6,7 +6,7 @@ import { AppService } from './app.service';
 import { RecordsModule } from './records/records.module';
 
 @Module({
-  imports: [RecordsModule, MongooseModule.forRoot("mongodb://127.0.0.1:27017/auto-g")],
+  imports: [RecordsModule, MongooseModule.forRoot("mongodb+srv://mlyk1234:king5247@cluster0.nbwgm.mongodb.net/myFirstDatabase?retryWrites=true&w=majority")],
   controllers: [AppController],
   providers: [AppService],
 })
