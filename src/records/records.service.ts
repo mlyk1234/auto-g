@@ -20,18 +20,18 @@ export class RecordsService {
     return this.carModel.find().exec();
   }
 
-  async findOne(name: string) {
-    return this.carModel.findOne({ name });  
+  async findOne(sku: string) {
+    return this.carModel.findOne({ sku });  
     // return `This action returns a #${id} record`;
   }
 
-  async update(name: string, updateRecordDto: UpdateRecordDto) {
-    return this.carModel.updateOne({ name }, {$set: { ...updateRecordDto}})
+  async update(sku: string, updateRecordDto: UpdateRecordDto) {
+    return this.carModel.updateOne({ sku }, {$set: { ...updateRecordDto}})
     // return `This action updates a #${id} record`;
   }
 
-  async remove(name: string) {
-    return this.carModel.deleteOne({ name });
+  async remove(sku: string) {
+    return this.carModel.deleteOne({ sku });
     // return `This action removes a #${id} record`;
   }
 }

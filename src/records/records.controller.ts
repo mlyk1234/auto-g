@@ -17,8 +17,8 @@ export class RecordsController {
     return this.recordsService.findAll();
   }
 
-  @Get(':name')
-  findOne(@Param('name') name: string) {
+  @Get(':sku')
+  findOne(@Param('sku') name: string) {
     return this.recordsService.findOne(name);
   }
 
@@ -27,8 +27,8 @@ export class RecordsController {
   //   return this.recordsService.findOne(+id);
   // }
 
-  @Patch(':name')
-  update(@Param('name') name: string, @Body() updateRecordDto: UpdateRecordDto) {
+  @Patch(':sku')
+  update(@Param('sku') name: string, @Body() updateRecordDto: UpdateRecordDto) {
     return this.recordsService.update(name, updateRecordDto);
   }
   // @Patch(':id')
@@ -36,8 +36,8 @@ export class RecordsController {
   //   return this.recordsService.update(+id, updateRecordDto);
   // }
 
-  @Delete(':name')
-  remove(@Param('name') name: string) {
+  @Delete(':sku')
+  remove(@Param('sku') name: string) {
     return this.recordsService.remove(name);
     // return this.recordsService.remove(+id);
   }
