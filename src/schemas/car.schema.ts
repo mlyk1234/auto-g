@@ -20,6 +20,12 @@ export class Car {
   @Prop()
   price: number;
 
+  @Prop()
+  status: string;
+
+  @Prop()
+  img: string;
+
 }
 
 export const CarSchema = SchemaFactory.createForClass(Car);
